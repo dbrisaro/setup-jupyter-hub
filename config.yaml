@@ -18,10 +18,17 @@ proxy:
   secretToken: "<RANDOM_HEX>"
 
 auth:
+  type: dummy
+  dummy:
+    password: 'clarita1905'
   admin:
     users:
       - dbrisaro
       - lbdiaz
+  whitelist:
+    users:
+      - nlois
+      - mrisaro
 
 singleuser:
   image:
