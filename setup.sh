@@ -13,6 +13,9 @@ kubectl create clusterrolebinding tiller \
 echo "initialize helm"
 # initialized helm within the tiller service account
 helm init --service-account tiller
+
+sed -i 's/<RANDOM_HEX>/'"$( openssl rand -hex 32 )"'/g' config.yaml
+
 helm repo add jupyterhub https://jupyterhub.github.io/helm-chart/
 
 # updates the repos for Helm repo integration

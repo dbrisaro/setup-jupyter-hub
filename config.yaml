@@ -1,5 +1,5 @@
 proxy:
-  secretToken: "88f6a113ab7eb77db331186769eb5cd48f25409f4508fa37cbdce3383495ac61"
+  secretToken: "<RANDOM_HEX>"
 
 auth:
   admin:
@@ -15,6 +15,7 @@ singleuser:
     display_name: "Scipy notebook"
     description: "Entorno de trabajo para circulación general"
 
+# https://zero-to-jupyterhub.readthedocs.io/en/latest/optimization.html
 prePuller:
   hook:
     enabled: false
