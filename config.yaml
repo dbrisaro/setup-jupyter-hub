@@ -1,0 +1,22 @@
+proxy:
+  secretToken: "88f6a113ab7eb77db331186769eb5cd48f25409f4508fa37cbdce3383495ac61"
+
+auth:
+  admin:
+    users:
+      - dbrisaro
+      - lbdiaz
+
+singleuser:
+  image:
+    name: jupyter/scipy-notebook
+    tag: b2562c469cdd
+  profileList:
+    display_name: "Scipy notebook"
+    description: "Entorno de trabajo para circulación general"
+
+prePuller:
+  hook:
+    enabled: false
+  continuous:
+    enabled: true
