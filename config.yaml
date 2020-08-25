@@ -1,6 +1,6 @@
 proxy:
-  secretToken: "<RANDOM_HEX>"
-
+#  secretToken: "<RANDOM_HEX>"
+  secretToken: "931ce8c2400e011f3850dce2f2611452ac177adbd681efa4d355d43b7d50959f"
 auth:
   type: dummy
   dummy:
@@ -15,17 +15,17 @@ auth:
       - mrisaro
 
 singleuser:
-    defaultUrl: "/lab"
+  defaultUrl: "/lab"
   image:
     name: jupyter/scipy-notebook
     tag: b2562c469cdd
+  cloudMetadata:
+    enabled: true
 
 hub:
   extraConfig:
-    00-jupyterlab: |
-      c.Spawner.default_url = '/lab'
-    01-hub-config: |
-        c.JupyterHub.shutdown_on_logout = True
+    jupyterlab: |
+      c.Spawner.cmd = ['jupyter-lab']
 
 # https://zero-to-jupyterhub.readthedocs.io/en/latest/optimization.html
 prePuller:
