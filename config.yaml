@@ -8,6 +8,7 @@ auth:
       - lbdiaz
 
 singleuser:
+  defaultUrl: "/lab"
   image:
     name: jupyter/scipy-notebook
     tag: b2562c469cdd
