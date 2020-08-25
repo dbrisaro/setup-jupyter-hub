@@ -27,11 +27,6 @@ singleuser:
   image:
     name: jupyter/scipy-notebook
     tag: b2562c469cdd
-  profileList:
-    display_name: "Scipy notebook"
-    description: "Entorno de trabajo para circulación general"
-    kubespawner_override:
-        image: jupyter/scipy-notebook:b2562c469cdd
 
 # https://zero-to-jupyterhub.readthedocs.io/en/latest/optimization.html
 prePuller:
