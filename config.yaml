@@ -4,7 +4,7 @@ proxy:
 auth:
   type: dummy
   dummy:
-    password: 'clarita1905'
+    password: 'circulacion2020'
   admin:
     users:
       - dbrisaro
@@ -13,19 +13,43 @@ auth:
     users:
       - nlois
       - mrisaro
+      - cgutierrez
+      - rbalmaceda
+      - miacovone
+      - fgomez
+      - enaranjo
+      - lcastro
+      - alopez
+      - cdemello
+      - iperez
+      - gmanta
+      - rtrinchin
+      - ymontesino
+      - cprudente
+
 
 singleuser:
+  extraEnv:
+    GRANT_SUDO: "yes"
+    NOTEBOOK_ARGS: "--allow-root"
+  uid: 0
+  cmd: start-singleuser.sh
   defaultUrl: "/lab"
   image:
     name: jupyter/scipy-notebook
     tag: b2562c469cdd
+  profileList:
+    - display_name: "Scipy enviroment"
+      description: "notebooks con librerías para análisis"
+      default: true
+
   cloudMetadata:
     enabled: true
 
 hub:
   extraConfig:
     jupyterlab: |
-      c.Spawner.cmd = ['jupyter-lab']
+      c.Spawner.default_url = "/lab"
 
 # https://zero-to-jupyterhub.readthedocs.io/en/latest/optimization.html
 prePuller:
