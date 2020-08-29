@@ -29,7 +29,6 @@ auth:
       - ymontesino
       - cprudente
 
-
 singleuser:
   extraEnv:
     GRANT_SUDO: "yes"
@@ -42,12 +41,13 @@ singleuser:
     tag: b2562c469cdd
   profileList:
     - display_name: "Scipy enviroment"
-      description: "notebooks con librerías para análisis"
+      description: "Notebooks con librerías para análisis"
       default: true
-#    - display_name: "Minimal enviroment"
-#     description: "gfotran compiler"
-#      kubespawner_override:
-#        image: jupyter/minimal-notebook:b2562c469cdd
+    - display_name: "Circulacion enviroment"
+      description: "Basado en scipy libraries"
+      kubespawner_override:
+        image: gcr.io/fabled-badge-287421/setup-jupyter-hub@sha256:e1bbf0a121de65212a2b7163a3679857b44c422d7294c0f8106615c15ff1f60e
+
   cloudMetadata:
     enabled: true
 
