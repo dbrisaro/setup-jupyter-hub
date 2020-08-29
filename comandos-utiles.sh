@@ -12,3 +12,5 @@ kubectl --namespace=jhub get pod
 #You can find the public IP of the JupyterHub by doing:
 
 kubectl --namespace=jhub get svc proxy-public
+
+mkdir /home/jovyan/shared && chown jovyan.users /home/jovyan/shared

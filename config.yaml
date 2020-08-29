@@ -9,6 +9,8 @@ auth:
     users:
       - dbrisaro
       - lbdiaz
+      - fbecker
+
   whitelist:
     users:
       - nlois
@@ -42,7 +44,10 @@ singleuser:
     - display_name: "Scipy enviroment"
       description: "notebooks con librerías para análisis"
       default: true
-
+#    - display_name: "Minimal enviroment"
+#     description: "gfotran compiler"
+#      kubespawner_override:
+#        image: jupyter/minimal-notebook:b2562c469cdd
   cloudMetadata:
     enabled: true
 
