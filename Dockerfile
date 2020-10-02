@@ -6,6 +6,8 @@ USER root
 
 RUN conda install -c conda-forge cartopy
 
+RUN conda install xarray
+
 RUN mkdir /home/jovyan/shared && chown jovyan.users /home/jovyan/shared
 
 RUN echo "superdaniu"
