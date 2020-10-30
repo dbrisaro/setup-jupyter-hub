@@ -43,16 +43,7 @@ singleuser:
   memory:
     limit: 4G
     guarantee: 512M
-  networkPolicy:
-    enabled: true
-    egress:
-      - ports:
-          - port: 53
-            protocol: UDP
-      - ports:
-          - port: 80
-      - ports:
-          - port: 443
+
   cloudMetadata:
     blockWithIptables: true
     ip: 169.254.169.254
