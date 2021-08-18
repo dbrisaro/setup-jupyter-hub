@@ -18,9 +18,9 @@ singleuser:
   #cloudMetadata:
   #  blockWithIptables: true
   #  ip: 169.254.169.254
-  extraEnv:
-    GRANT_SUDO: "yes"
-    NOTEBOOK_ARGS: "--allow-root"
+#  extraEnv:
+#    GRANT_SUDO: "yes"
+#    NOTEBOOK_ARGS: "--allow-root"
   uid: 0
   cmd: start-singleuser.sh
   defaultUrl: "/lab"
@@ -31,10 +31,10 @@ singleuser:
     - display_name: "Scipy enviroment"
       description: "Notebooks con librerías para análisis"
       default: true
-    - display_name: "Circulacion enviroment"
-      description: "Basado en scipy libraries"
-      kubespawner_override:
-        image: gcr.io/fabled-badge-287421/setup-jupyter-hub@sha256:960cb3659f3a22a0fd3a3c8a9c9e5a14cc9ee5383cf6fa2c561e49f5e5aa8838
+#    - display_name: "Circulacion enviroment"
+#      description: "Basado en scipy libraries"
+#      kubespawner_override:
+#        image: gcr.io/fabled-badge-287421/setup-jupyter-hub@sha256:960cb3659f3a22a0fd3a3c8a9c9e5a14cc9ee5383cf6fa2c561e49f5e5aa8838
 #  cloudMetadata:
 #    enabled: true
 
@@ -67,17 +67,17 @@ hub:
     JupyterHub:
       authenticator_class: dummy
       
-scheduling:
-  userScheduler:
-    enabled: true
-  podPriority:
-    enabled: true
-  userPlaceholder:
-    enabled: true
-    replicas: 4
-  userPods:
-    nodeAffinity:
-      matchNodePurpose: require
+#scheduling:
+#  userScheduler:
+#    enabled: true
+#  podPriority:
+#    enabled: true
+#  userPlaceholder:
+#    enabled: true
+#    replicas: 4
+#  userPods:
+#    nodeAffinity:
+#      matchNodePurpose: require
 
 cull:
   enabled: true
