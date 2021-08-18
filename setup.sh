@@ -25,5 +25,5 @@ echo "verify helm"
 # verify that helm is installed in the cluster
 kubectl get deploy,svc tiller-deploy -n kube-system
 
-helm upgrade --install jhub jupyterhub/jupyterhub --namespace jhub --version 0.9.0 -f config.yaml
+helm upgrade --cleanup-on-fail --install jhub jupyterhub/jupyterhub --namespace jhub --create-namespace --version 1.1.2 --values config.yaml
 
