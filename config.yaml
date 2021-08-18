@@ -11,30 +11,28 @@ proxy:
 auth:
   type: dummy
   dummy:
-    password: 'circulacion2020'
+    password: 'circulacion2021'
   admin:
     users:
       - dbrisaro
       - lbdiaz
-      - fbecker
+      - fdenapole
 
   whitelist:
     users:
       - nlois
-      - mrisaro
-      - cgutierrez
-      - rbalmaceda
-      - miacovone
-      - fgomez
-      - enaranjo
-      - lcastro
-      - alopez
-      - signacio
-      - iperez
-      - gmanta
-      - rtrinchin
-      - ymontesino
-      - cprudente
+      - atoledo
+      - mbarboza
+      - jhernandez
+      - smanzano
+      - pgranovsky
+      - yvelazquez
+      - fghetti
+      - sayala
+      - nvaldera
+      - mperez
+      - ngomez
+      - fsolari
 
 singleuser:
   cpu:
@@ -71,7 +69,31 @@ hub:
   extraConfig:
     jupyterlab: |
       c.Spawner.default_url = "/lab"
-
+  config:
+    Authenticator:
+      admin_users:
+            - dbrisaro
+            - lbdiaz
+            - fdenapole
+      allowed_users: 
+            - nlois
+            - atoledo
+            - mbarboza
+            - jhernandez
+            - smanzano
+            - pgranovsky
+            - yvelazquez
+            - fghetti
+            - sayala
+            - nvaldera
+            - mperez
+            - ngomez
+            - fsolari
+    DummyAuthenticator:
+      password: 'circulacion2021'
+    JupyterHub:
+      authenticator_class: dummy
+      
 scheduling:
   userScheduler:
     enabled: true
