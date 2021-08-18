@@ -8,32 +8,6 @@ proxy:
       - dbrisaro.dev
     letsencrypt:
       contactEmail: dbrisaro@gmail.com
-auth:
-  type: dummy
-  dummy:
-    password: 'circulacion2021'
-  admin:
-    users:
-      - dbrisaro
-      - lbdiaz
-      - fdenapole
-
-  whitelist:
-    users:
-      - nlois
-      - atoledo
-      - mbarboza
-      - jhernandez
-      - smanzano
-      - pgranovsky
-      - yvelazquez
-      - fghetti
-      - sayala
-      - nvaldera
-      - mperez
-      - ngomez
-      - fsolari
-
 singleuser:
   cpu:
     limit: 4
@@ -41,10 +15,9 @@ singleuser:
   memory:
     limit: 4G
     guarantee: 512M
-
-  cloudMetadata:
-    blockWithIptables: true
-    ip: 169.254.169.254
+  #cloudMetadata:
+  #  blockWithIptables: true
+  #  ip: 169.254.169.254
   extraEnv:
     GRANT_SUDO: "yes"
     NOTEBOOK_ARGS: "--allow-root"
@@ -62,8 +35,8 @@ singleuser:
       description: "Basado en scipy libraries"
       kubespawner_override:
         image: gcr.io/fabled-badge-287421/setup-jupyter-hub@sha256:960cb3659f3a22a0fd3a3c8a9c9e5a14cc9ee5383cf6fa2c561e49f5e5aa8838
-  cloudMetadata:
-    enabled: true
+#  cloudMetadata:
+#    enabled: true
 
 hub:
   extraConfig:
